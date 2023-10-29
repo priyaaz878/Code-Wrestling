@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style the button */
+        .info-button {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background-color: #007BFF; /* Button background color */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding for the button */
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Style the form fields */
+        .info-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="info-button" onclick="showForm()">Get More Information</button>
+
+    <div id="info-form" style="display: none;">
+        <form class="info-form">
+            <input type="text" placeholder="Name" id="name">
+            <input type="text" placeholder="Phone Number" id="phone">
+            <button onclick="submitInfo()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function showForm() {
+            document.getElementById("info-form").style.display = "block";
+        }
+
+        function submitInfo() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            // You can now use JavaScript to handle the data, e.g., send it to a server.
+        }
+    </script>
+</body>
+</html>
